@@ -18,7 +18,7 @@ namespace A100
             Console.Write("£");
             double slabPrice = double.Parse(Console.ReadLine());
             double totalPrice = slabsAcross * slabsDeep * slabPrice;
-            string strtotalPrice = "£" + String.Format("{0:0.00}", totalPrice);
+            string strtotalPrice = "£" + String.Format("{0:0.00}", totalPrice); //formats the price to 2d.p.
             Console.WriteLine("Your total price: " + strtotalPrice);
             Console.ReadKey();
         }
