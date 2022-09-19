@@ -12,8 +12,8 @@ namespace L100
         {
             Console.Write("Enter the price: £");
             int price = int.Parse(Console.ReadLine());
-            const int VAT = 20;
-            string totalPrice = "£" + String.Format("{0:0.00}", price + (VAT * price / 100));
+            const int VAT = 20; //sets VAT as a constant
+            string totalPrice = "£" + String.Format("{0:0.00}", price + (VAT * price / 100)); //formats the price to 2d.p. and calculates the VAT from 20% to 0.20
             Console.WriteLine("VAT is " + VAT + "%, making your total price: " + totalPrice);
             Console.ReadKey();
         }
