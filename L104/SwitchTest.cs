@@ -12,8 +12,8 @@ namespace L104
         static void Main(string[] args)
         {
             Console.Write("Enter your favourite fish: ");
-            TextInfo textInfo = new CultureInfo("en-GB", false).TextInfo;//allows for capitalisation of both words, using System.Globalization, and en-GB locale (AKA culture), and "false" for a user override
-            string bestFish = textInfo.ToTitleCase(Console.ReadLine()); //asks for input, and automatically capitalises the first letter of both words
+            TextInfo textInfo = new CultureInfo("en-GB", false).TextInfo; //allows for capitalisation of both words, using System.Globalization, and en-GB locale (AKA culture), and "false" for a user override
+            string bestFish = textInfo.ToTitleCase(Console.ReadLine()); //asks for input, and automatically capitalises the first letter of all words (according to the rules of ToTitleCase)
             switch (bestFish)
             {
                 case "Crucian Carp":
@@ -23,10 +23,10 @@ namespace L104
                     Console.WriteLine("come on you can do better than that");
                     break;
                 case "Sturgeon Bass":
-                    Console.WriteLine("thats poor from you");
+                    Console.WriteLine("that's pretty poor from you");
                     break;
                 default:
-                    Console.WriteLine($"{/*char.ToUpper(*/bestFish/*[0])*/} might aswell be a Bird. you are wrong"); //commented the char.ToUpper - to show an alternative to capitalise the first letter of the string, which I didn't use
+                    Console.WriteLine($"{/*char.ToUpper(*/bestFish/*[0])*/} might aswell be a Bird. you are wrong. shame on you"); //commented the char.ToUpper - an alternative to capitalise the first letter of the string, which I didn't use
                     break;
             }
             Console.ReadKey();
