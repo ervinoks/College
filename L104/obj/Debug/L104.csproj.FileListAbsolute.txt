@@ -1,8 +1,0 @@
-\\RHEA\HOME\2022\22EO3561\Documents\Visual Studio 2022\Projects\Classwork\L104\bin\Debug\L104.exe.config
-\\RHEA\HOME\2022\22EO3561\Documents\Visual Studio 2022\Projects\Classwork\L104\bin\Debug\L104.exe
-\\RHEA\HOME\2022\22EO3561\Documents\Visual Studio 2022\Projects\Classwork\L104\bin\Debug\L104.pdb
-\\RHEA\HOME\2022\22EO3561\Documents\Visual Studio 2022\Projects\Classwork\L104\obj\Debug\L104.csproj.SuggestedBindingRedirects.cache
-\\RHEA\HOME\2022\22EO3561\Documents\Visual Studio 2022\Projects\Classwork\L104\obj\Debug\L104.csproj.CoreCompileInputs.cache
-\\RHEA\HOME\2022\22EO3561\Documents\Visual Studio 2022\Projects\Classwork\L104\obj\Debug\L104.exe
-\\RHEA\HOME\2022\22EO3561\Documents\Visual Studio 2022\Projects\Classwork\L104\obj\Debug\L104.pdb
-\\RHEA\HOME\2022\22EO3561\Documents\Visual Studio 2022\Projects\Classwork\L104\obj\Debug\L104.csproj.AssemblyReference.cache
