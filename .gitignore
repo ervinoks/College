@@ -43,7 +43,6 @@ Generated\ Files/
 
 #  Visual Studio Code files
 .vscode/
-!.vscode/launch.json/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
