@@ -231,6 +231,9 @@ _pkginfo.txt
 *.[Cc]ache
 # but keep track of directories ending in .cache
 !?*.[Cc]ache/
+# Debug directories
+**/bin/Debug/
+**/obj/Debug/
 
 # Others
 ClientBin/
