@@ -13,6 +13,7 @@ namespace A106
         static void Main(string[] args)
         {
             double money = 100;
+            Console.WriteLine("You have £" + String.Format("{0:0.00}", money) + " to spend.");
             Random rand = new Random();
             Console.WriteLine("You head into the casino, to play some blackjack.");
             Thread.Sleep(1000);
