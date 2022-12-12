@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace L101
+namespace L109
 {
-    internal class Program
+    internal class CashMachine
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
