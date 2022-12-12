@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>A103.DoWhile</StartupObject>
+    <StartupObject>A103.Powers</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

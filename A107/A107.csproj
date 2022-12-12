@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1F894EC8-CFD4-4E21-8915-1D38D2E9A4AB}</ProjectGuid>
+    <ProjectGuid>{9B4621D1-451E-4397-9C66-8AAC8AFF264A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>A106</RootNamespace>
-    <AssemblyName>A106</AssemblyName>
+    <RootNamespace>A107</RootNamespace>
+    <AssemblyName>A107</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>A106.Blackjack</StartupObject>
+    <StartupObject>A107.Fibonacci</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Blackjack.cs" />
-    <Compile Include="RandomCardGenerator.cs" />
+    <Compile Include="Fibonacci.cs" />
+    <Compile Include="SmallestElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
