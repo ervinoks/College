@@ -44,7 +44,7 @@ namespace A105
         }
         static int itemNum = -1;
         static double money = 0;
-        static void House()
+        static void House(bool fromCasino)
         {
             string House = @"
 (')) ^v^  _           (`)_
@@ -54,32 +54,55 @@ namespace A105
 ,,,oO8|_o8_|_|_8o_|&888o,,,
 ";
             Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Thread.Sleep(1000);
             ASCIIArtOutputter(House);
-            string welcomeMessage = "You are in your cottage, it's small but cozy.";
-            string provokeChoices = "There are 3 items you can bring with you along for your journey for the day.";
-            Console.WriteLine(welcomeMessage.PadLeft(100 + welcomeMessage.Length / 2));
-            Console.WriteLine(provokeChoices.PadLeft(100 + provokeChoices.Length / 2));
-            string[] items = { "[ ] Fishing Rod", "[ ] Knife", "[ ] Wallet" };
-            Choosing(items);
-            Console.Clear();
-            switch (userChoice)
+            Thread.Sleep(1000);
+            if (fromCasino == true)
             {
-                case 0:
-                    Console.WriteLine("You have chosen the fishing rod.");
-                    itemNum = 0;
-                    break;
-                case 1:
-                    Console.WriteLine("You have chosen the knife.");
-                    itemNum = 1;
-                    break;
-                case 2:
-                    Console.WriteLine("You have chosen the wallet.");
-                    money = 20;
-                    Thread.Sleep(2000);
-                    Console.WriteLine("You have £" + String.Format("{0:0.00}", money) + " to spend.");
-                    itemNum = 2;
-                    break;
+                string welcomeMessage = "You have returned back to your house.";
+                string moneyMessage = "You ended with £" + String.Format("{0:0.00}", money) + " today, and survived. Congratulations!";
+				string gameOverMessage = "You head straight to bed, starved, lonely, and sad. ";
+                Console.WriteLine(welcomeMessage.PadLeft(100 + welcomeMessage.Length / 2));                
+                Thread.Sleep(500);
+                Console.WriteLine(moneyMessage.PadLeft(100 + moneyMessage.Length / 2));
+                Thread.Sleep(1000);
+                Console.Write(gameOverMessage.PadLeft(91 + (gameOverMessage.Length + 8) / 2));
+                Console.ForegroundColor = ConsoleColor.Green;
+                Thread.Sleep(2000);
+                Console.Write("You win.");
             }
+            else
+            {
+                string welcomeMessage = "You are in your cottage, it's small but cozy.";
+                string provokeChoices = "There are 3 items you can bring with you along for your journey for the day.";
+                Console.WriteLine(welcomeMessage.PadLeft(100 + welcomeMessage.Length / 2));
+                Thread.Sleep(500);
+                Console.WriteLine(provokeChoices.PadLeft(100 + provokeChoices.Length / 2));
+                Thread.Sleep(1000);
+                string[] items = { "[ ] Fishing Rod", "[ ] Knife", "[ ] Wallet" };
+                Choosing(items);
+                Console.Clear();
+                switch (userChoice)
+                {
+                    case 0:
+                        Console.WriteLine("You have chosen the fishing rod.");
+                        itemNum = 0;
+                        break;
+                    case 1:
+                        Console.WriteLine("You have chosen the knife.");
+                        itemNum = 1;
+                        break;
+                    case 2:
+                        Console.WriteLine("You have chosen the wallet.");
+                        money = 20;
+                        Thread.Sleep(2000);
+                        Console.WriteLine("You have £" + String.Format("{0:0.00}", money) + " to spend.");
+                        itemNum = 2;
+                        break;
+                }
+            }
+            
+            
             Thread.Sleep(2000);
         }
         static void Paths()
@@ -345,7 +368,7 @@ namespace A105
                     Thread.Sleep(1000);
                     double totalWinnings = 0, totalLosses = 0;
                     bool gameOver = false;
-                    while (gameOver != true)
+                    while (gameOver == false)
                     {
                         double bet, bet1 = -1, bet2 = -1;
                         Thread.Sleep(1000);
@@ -355,7 +378,7 @@ namespace A105
                             bet = double.Parse(Console.ReadLine());
                             if (bet > money) { Console.WriteLine("You don't have enough money for this bet."); }
                         } while (bet > money);
-                        if (bet == 0) { gameOver = true; }
+                        if (bet == 0) { gameOver = true; break; }
                         money -= bet;
                         List<int> house = new List<int>
                         {
@@ -369,7 +392,7 @@ namespace A105
                         string houseOutput = $"Dealer's hand is {house[0]}, {house[1]}", userOutput;
                         if (user[0] == 11) { userOutput = $"Your hand is an ace and {user[1]}"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
                         else if (user[1] == 11) { userOutput = $"Your hand is {user[0]} and an ace"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
-                        else { userOutput = $"Your hand is {user[0]} and {user[1]}"; Console.WriteLine(userOutput + ", totaling {userTotal}, and the house card is {house[0]}."); }
+                        else { userOutput = $"Your hand is {user[0]} and {user[1]}"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
                         bool split = false, splitCheck = false, splitPossibility = false, handOver = false;
                         if (money > bet * 2) { splitPossibility = true; }
                         do
@@ -519,7 +542,7 @@ namespace A105
                             if (user1Total <= 21)
                             {
                                 if (houseTotal > user1Total && houseTotal <= 21) { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("You lost your first hand."); Console.ResetColor(); totalLosses += bet1; } //first hand
-                                else if (houseTotal < user1Total) { Console.ForegroundColor = ConsoleColor.Green;  Console.WriteLine("You won your first hand."); money += bet1 * 2; totalWinnings += bet1 * 2; Console.ResetColor(); }
+                                else if (houseTotal < user1Total) { Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("You won your first hand."); money += bet1 * 2; totalWinnings += bet1 * 2; Console.ResetColor(); }
                                 else if (houseTotal == user1Total) { Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("You tied your first hand, and got your bet back."); money += bet1; totalWinnings += bet1; Console.ResetColor(); }
                                 else if (houseTotal > 21) { Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("Dealer went bust, you win your first hand."); money += bet1 * 2; totalWinnings += bet1 * 2; Console.ResetColor(); }
                             }
@@ -548,7 +571,7 @@ namespace A105
                                 if (houseTotal > userTotal && houseTotal <= 21) { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("The dealer won, and you lost your bet."); Console.ResetColor(); totalLosses += bet; }
                                 else if (houseTotal < userTotal) { Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("You won your bet of £" + String.Format("{0:0.00}", bet) + "!"); money += bet * 2; totalWinnings += bet * 2; Console.ResetColor(); }
                                 else if (houseTotal == userTotal) { Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("You tied, and got your bet back."); money += bet; totalWinnings += bet; Console.ResetColor(); }
-                                else if (houseTotal > 21) { Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("Dealer went bust, you win your second hand."); money += bet2 * 2; totalWinnings += bet2 * 2; Console.ResetColor(); }
+                                else if (houseTotal > 21) { Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("Dealer went bust, you win your hand."); money += bet * 2; totalWinnings += bet * 2; Console.ResetColor(); }
                             }
                             else
                             {
@@ -558,12 +581,13 @@ namespace A105
                         }
                         Thread.Sleep(5000);
                         Console.Clear();
-                        Console.WriteLine("Your total winnings are +£" + String.Format("0:0.00", totalWinnings) + ", and your total losses are -£" + String.Format("{0:0.00}", totalLosses) + ".");
+                        Console.WriteLine("Your total winnings are +£" + String.Format("{0:0.00}", totalWinnings) + ", and your total losses are -£" + String.Format("{0:0.00}", totalLosses) + ".");
                         Thread.Sleep(1000);
                         Console.WriteLine("You have £" + String.Format("{0:0.00}", money) + " left.");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Bet again, or bet 0 to go back home and collect your winnings.");
                     }
+                    Console.Clear();
+                    House(gameOver);
                     break;
             }
         }
@@ -652,11 +676,10 @@ namespace A105
         {
             Console.SetWindowSize(200, 55);
             Title();
-            House();
+            House(false);
             Console.Clear();
             Paths();
-            //string rows = "Row 1\r\nRow 2\r\nRow 3";
-            //Console.WriteLine(rows);
+
             Console.ReadKey();
         }
     }

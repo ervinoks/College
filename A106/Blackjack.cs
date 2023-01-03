@@ -27,7 +27,7 @@ namespace A106
                 Thread.Sleep(1000);
                 do
                 {
-                    Console.WriteLine("Bet however much you want, and bet 0 to go back home.");
+                    Console.WriteLine("Bet however much you want, and bet 0 to stop.");
                     bet = double.Parse(Console.ReadLine());
                     if (bet > money) { Console.WriteLine("You don't have enough money for this bet."); }
                 } while (bet > money);
@@ -45,7 +45,7 @@ namespace A106
                 string houseOutput = $"Dealer's hand is {house[0]}, {house[1]}", userOutput;
                 if (user[0] == 11) { userOutput = $"Your hand is an ace and {user[1]}"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
                 else if (user[1] == 11) { userOutput = $"Your hand is {user[0]} and an ace"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
-                else { userOutput = $"Your hand is {user[0]} and {user[1]}"; Console.WriteLine(userOutput + ", totaling {userTotal}, and the house card is {house[0]}."); }
+                else { userOutput = $"Your hand is {user[0]} and {user[1]}"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
                 bool split = false, splitCheck = false, splitPossibility = false, handOver = false;
                 if (money > bet * 2) { splitPossibility = true; }
                 do
@@ -237,7 +237,6 @@ namespace A106
                 Thread.Sleep(1000);
                 Console.WriteLine("You have £" + String.Format("{0:0.00}", money) + " left.");
                 Thread.Sleep(1000);
-                Console.WriteLine("Bet again, or bet 0 to stop.");
             }
         }
     }
