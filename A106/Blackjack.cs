@@ -45,7 +45,7 @@ namespace A106
                 string houseOutput = $"Dealer's hand is {house[0]}, {house[1]}", userOutput;
                 if (user[0] == 11) { userOutput = $"Your hand is an ace and {user[1]}"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
                 else if (user[1] == 11) { userOutput = $"Your hand is {user[0]} and an ace"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
-                else { userOutput = $"Your hand is {user[0]} and {user[1]}"; Console.WriteLine(userOutput + ", totaling {userTotal}, and the house card is {house[0]}."); }
+                else { userOutput = $"Your hand is {user[0]} and {user[1]}"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
                 bool split = false, splitCheck = false, splitPossibility = false, handOver = false;
                 if (money > bet * 2) { splitPossibility = true; }
                 do
