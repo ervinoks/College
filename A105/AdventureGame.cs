@@ -73,7 +73,7 @@ namespace A105
             }
             else
             {
-                string welcomeMessage = "You are in your cottage, it's small but cozy.";
+                string welcomeMessage = "You are in your cottage, it's small but cosy.";
                 string provokeChoices = "There are 3 items you can bring with you along for your journey for the day.";
                 Console.WriteLine(welcomeMessage.PadLeft(100 + welcomeMessage.Length / 2));
                 Thread.Sleep(500);
@@ -390,9 +390,9 @@ namespace A105
                         };
                         int houseTotal = house[0] + house[1], userTotal = user[0] + user[1], userCount = 1, houseCount = 1, user1Total = 0, user2Total = 0, user1Count = 1, user2Count = 1;
                         string houseOutput = $"Dealer's hand is {house[0]}, {house[1]}", userOutput;
-                        if (user[0] == 11) { userOutput = $"Your hand is an ace and {user[1]}"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
-                        else if (user[1] == 11) { userOutput = $"Your hand is {user[0]} and an ace"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
-                        else { userOutput = $"Your hand is {user[0]} and {user[1]}"; Console.WriteLine(userOutput + $", totaling {userTotal}, and the house card is {house[0]}."); }
+                        if (user[0] == 11) { userOutput = $"Your hand is an ace and {user[1]}"; Console.WriteLine(userOutput + $", totalling {userTotal}, and the house card is {house[0]}."); }
+                        else if (user[1] == 11) { userOutput = $"Your hand is {user[0]} and an ace"; Console.WriteLine(userOutput + $", totalling {userTotal}, and the house card is {house[0]}."); }
+                        else { userOutput = $"Your hand is {user[0]} and {user[1]}"; Console.WriteLine(userOutput + $", totalling {userTotal}, and the house card is {house[0]}."); }
                         bool split = false, splitCheck = false, splitPossibility = false, handOver = false;
                         if (money > bet * 2) { splitPossibility = true; }
                         do
@@ -409,7 +409,7 @@ namespace A105
                                 userTotal += user[userCount];
                                 if (user[userCount] == 11) { userOutput += ", and an ace"; }
                                 else { userOutput += $", and {user[userCount]}"; }
-                                Console.WriteLine($"{userOutput}, totaling {userTotal}");
+                                Console.WriteLine($"{userOutput}, totalling {userTotal}");
                                 Thread.Sleep(1000);
                                 for (int i = 0; i < user.Count; i++)
                                 {
@@ -427,7 +427,7 @@ namespace A105
                             {
                                 Console.Clear();
                                 Thread.Sleep(1000);
-                                Console.ForegroundColor = ConsoleColor.White; Console.WriteLine($"{userOutput}, totaling {userTotal}"); Console.ResetColor();
+                                Console.ForegroundColor = ConsoleColor.White; Console.WriteLine($"{userOutput}, totalling {userTotal}"); Console.ResetColor();
                                 Thread.Sleep(1000);
                                 handOver = true;
                             }
@@ -446,7 +446,7 @@ namespace A105
                                 user1Total += user1[user1Count];
                                 if (user1[user1Count] == 11) { user1Output += ", and an ace"; }
                                 else { user1Output += $", and {user1[user1Count]}"; }
-                                Console.WriteLine($"{user1Output}, totaling {user1Total}");
+                                Console.WriteLine($"{user1Output}, totalling {user1Total}");
                                 Thread.Sleep(1000);
                                 do
                                 {
@@ -459,7 +459,7 @@ namespace A105
                                         user1Total += user1[user1Count];
                                         if (user1[user1Count] == 11) { user1Output += ", and an ace"; }
                                         else { user1Output += $", and {user1[user1Count]}"; }
-                                        Console.WriteLine($"{user1Output}, totaling {user1Total}");
+                                        Console.WriteLine($"{user1Output}, totalling {user1Total}");
                                         Thread.Sleep(1000);
                                         for (int i = 0; i < user1.Count; i++)
                                         {
@@ -478,7 +478,7 @@ namespace A105
                                     {
                                         Console.Clear();
                                         Thread.Sleep(1000);
-                                        Console.ForegroundColor = ConsoleColor.White; Console.WriteLine($"{user1Output}, totaling {user1Total}"); Console.ResetColor();
+                                        Console.ForegroundColor = ConsoleColor.White; Console.WriteLine($"{user1Output}, totalling {user1Total}"); Console.ResetColor();
                                         Thread.Sleep(1000);
                                         user1handOver = true;
                                     }
@@ -487,7 +487,7 @@ namespace A105
                                 user2Total += user2[user2Count];
                                 if (user2[user2Count] == 11) { user2Output += ", and an ace"; }
                                 else { user2Output += $", and {user2[user2Count]}"; }
-                                Console.WriteLine($"{user2Output}, totaling {user2Total}");
+                                Console.WriteLine($"{user2Output}, totalling {user2Total}");
                                 Thread.Sleep(1000);
                                 do
                                 {
@@ -500,7 +500,7 @@ namespace A105
                                         user2Total += user2[user1Count];
                                         if (user2[user2Count] == 11) { user2Output += ", and an ace"; }
                                         else { user2Output += $", and {user2[user2Count]}"; }
-                                        Console.WriteLine($"{user2Output}, totaling {user2Total}");
+                                        Console.WriteLine($"{user2Output}, totalling {user2Total}");
                                         Thread.Sleep(1000);
                                         for (int i = 0; i < user2.Count; i++)
                                         {
@@ -519,7 +519,7 @@ namespace A105
                                     {
                                         Console.Clear();
                                         Thread.Sleep(1000);
-                                        Console.ForegroundColor = ConsoleColor.White; Console.WriteLine($"{user2Output}, totaling {user2Total}"); Console.ResetColor();
+                                        Console.ForegroundColor = ConsoleColor.White; Console.WriteLine($"{user2Output}, totalling {user2Total}"); Console.ResetColor();
                                         Thread.Sleep(1000);
                                         user2handOver = true;
                                     }
@@ -535,7 +535,7 @@ namespace A105
                             houseTotal += house[houseCount];
                             houseOutput += $", and {house[houseCount]}";
                         }
-                        Console.WriteLine($"{houseOutput}, totaling {houseTotal}");
+                        Console.WriteLine($"{houseOutput}, totalling {houseTotal}");
                         Thread.Sleep(1000);
                         if (split == true)
                         {
