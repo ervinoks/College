@@ -57,7 +57,7 @@ namespace A120
 					}
 					Console.Write($"{randoms[x, y]}"); // inputs each random value
 				}
-				Console.Write($" {sumsY[y]}"); // inputs the sum of the row, at the end, in red
+				Console.Write($" {sumsY[y]}"); // inputs the sum of the row, at the end (and in red still if highest sum)
 				Console.CursorLeft -= (sumsY[y].ToString().Length + 1); // goes back to the space before the sum
 				Console.ResetColor();
 				Console.Write("┃\n"); // ^^ to then put a divider in the regular grey colour
