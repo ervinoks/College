@@ -8,8 +8,8 @@ namespace A122
 {
     internal class Warrior
     {
-        private string name;
-        private int currentHealth, maxHealth, attackDamage;
+        protected string name;
+        protected int currentHealth, maxHealth, attackDamage;
         public Warrior(string myName)
         {
             name = myName;
