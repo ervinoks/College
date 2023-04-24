@@ -6,27 +6,35 @@ using System.Threading.Tasks;
 
 namespace A122
 {
-    internal class Warrior
-    {
-        protected string name;
-        protected int currentHealth, maxHealth, attackDamage;
-        public Warrior(string myName)
-        {
-            name = myName;
-            maxHealth = 100;
-            currentHealth = maxHealth;
-            attackDamage = 10;
-        }
-        public int GetHealth() => currentHealth;
-        public string GetName() => name;
-        public bool IsAlive() => currentHealth > 0;
-        public void Attack(Warrior enemy, int diceRoll)
-        {
-            enemy.Attacked(diceRoll, attackDamage);
-        }
-        public void Attacked(int diceRoll, int attackedDamage)
-        {
-            currentHealth -= diceRoll * attackDamage;
-        }
-    }
+	internal class Warrior
+	{
+		protected string name;
+		protected int currentHealth, maxHealth, attackDamage;
+		protected bool defensive;
+		public Warrior(string myName, bool defensive)
+		{
+			name = myName;
+			maxHealth = 100;
+			currentHealth = maxHealth;
+			attackDamage = defensive ? 6 : 10;
+			this.defensive = defensive;
+		}
+		public int GetHealth() => currentHealth;
+		public int GetMaxHealth() => maxHealth;
+		public string GetName() => name;
+		public bool IsAlive() => currentHealth > 0;
+		public virtual void Attack(Warrior enemy, int diceRoll)
+		{
+			enemy.Attacked(attackDamage, diceRoll);
+		}
+		public void Attacked(int attackedDamage, int diceRoll)
+		{
+			attackedDamage = (int)Math.Ceiling(defensive ?
+				attackedDamage * 0.7 : attackedDamage);
+			currentHealth -= diceRoll * attackedDamage;
+			if (currentHealth < 0) { currentHealth = 0; }
+			Console.ForegroundColor = ConsoleColor.DarkGray;
+			Console.WriteLine($"DMG: {diceRoll * attackedDamage}");
+		}
+	}
 }
