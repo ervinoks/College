@@ -16,16 +16,19 @@ However for VSCode, you require the [C# extension](https://marketplace.visualstu
 - Once you have these extensions, you can view the code and edit, but debugging can get tedious. 
 - It's possible to use **"Run and Debug"** and make a launch.json, or use the terminal and use `dotnet` commands, such as: 
     ```batch
-    dotnet build 
+    dotnet build
     dotnet run
     ```
-    or by trying to launch the `.exe` it creates in `\bin\Debug` once it has compiled.
+    or by trying to launch the `.exe` it creates in `\bin\Debug` once it has compiled (but obviously no debug features).
 
 With Visual Studio Community, things should work right away without any extensions:
 - You can easily clone the repository as soon as you launch it up, instead of creating a new project or solution.  
  Or you can clone it through the Git option at the top of the window, then copying the URL - https://github.com/3leh/College.git.
-- Once you have the solution open, to run specific **.cs** files, double click **"Properties"** in that class, and make sure you're in **"Application"**. 
-- Under **"Startup object:"** it will likely say **"(Not set)"**, change this to the desired program, Ctrl+S to save.
-- Then once you click "**<img src="https://user-images.githubusercontent.com/37591724/211109448-66de17b4-f41a-4219-9afa-5c084ecd5c6a.svg" width="11" height="11"> Start**" for that class, it will run that selected program.
+ - Once you have the solution open, you can choose any desired project using the drop down window in the debug toolbar.
+    - Or to run specific `.cs` files, double click **"Properties"** in that class, and make sure you're in **"Application"**. 
+    - Under **"Startup object:"** it will likely say **"(Not set)"**, change this to the desired program, Ctrl+S to save.
+- Then once you click "**<picture><img src="https://github.com/3leh/College/assets/37591724/7d123503-75d1-47b2-b7c8-c75485454391" width='11' height='11'></picture> Start**" (or just <picture><img src="https://github.com/3leh/College/assets/37591724/982379dc-5468-4c86-908d-b2dad7094137" width='11' height='11' title="Start Without Debugging (Ctrl+F5)"></picture>), it will run that selected program.
+- You can also add breakpoints as necessary to see what happens throughout the code, by just clicking in the margin on the left of the code editor, to the left of the line numbers until you see:
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/3leh/College/assets/37591724/2dd0bd0c-c6fb-4f57-98ca-e1d581fee13e"><img src="https://github.com/3leh/College/assets/37591724/94b977f5-7ce6-4502-9f2a-ca004e8910df" width='11' height='11' title="Breakpoint Available"></picture>, then click to enable it: <picture><img src="https://github.com/3leh/College/assets/37591724/5c99624f-7834-498b-8cbc-07d175075edd" width='11' height='11' title="Breakpoint Enabled"></picture>.
 
 You also will need [.NET SDKs](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks "Download .NET") to run everything, preferably a .NET 6.0 SDK, and you could also get the latest .NET framework off of there, which I recommended especially for use with VSCode, as OmniSharp (which is what the C# extension uses) might have errors without .NET 4.8.
