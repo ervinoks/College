@@ -1,4 +1,4 @@
-# College ![GitHub top language](https://img.shields.io/github/languages/top/3leh/College?color=blueviolet) ![GitHub repo size](https://img.shields.io/github/repo-size/3leh/College?color=green) ![GitHub last commit](https://img.shields.io/github/last-commit/3leh/College)
+# College <picture><img alt="top lang" src="https://img.shields.io/github/languages/top/3leh/College?color=blueviolet"></picture> <picture><img alt="repo size" src="https://img.shields.io/github/repo-size/3leh/College?color=green"></picture> <picture><img alt="last commit" src="https://img.shields.io/github/last-commit/3leh/College"></picture>
 All my programming throughout college. The tasks I do can usually be found in the .pdf files which are in the folder alongside the source files. In some projects, especially the earliest ones, I have different <samp>.cs</samp> files for different programs all in the same project, so you can just go into Properties to change the startup object to the desired program that you want to run ([how-to](#vs-com)).
 
 ## What the letters mean:
@@ -7,22 +7,22 @@ All my programming throughout college. The tasks I do can usually be found in th
         <th align="center">A</td>
         <th align="center">L</td>
         <th align="center">W</td>
-        <td rowspan="4">&nbsp;</td>
+        <td rowspan="4"></td>
         <th align="center">Assessments / CAP</td>
     </tr>
     <tr>
         <td align="center">
-            <a href="Assignments">Assignments</a><br>
-            <img alt="GitHub repo dir count (Assignments)" src="https://img.shields.io/github/directory-file-count/3leh/College/Assignments?type=dir&color=lightgrey"></td>
+            <a href="Assignments">Assignments<br>
+            <picture><img alt="dir count in Assignments" src="https://img.shields.io/github/directory-file-count/3leh/College/Assignments?type=dir&color=lightgrey"></picture></a></td>
         <td align="center">
-            <a href="Lessons">Lessons</a><br>
-            <img alt="GitHub repo dir count (Lessons)" src="https://img.shields.io/github/directory-file-count/3leh/College/Lessons?type=dir&color=lightgrey"></td>
+            <a href="Lessons">Lessons<br>
+            <picture><img alt="dir count in Lessons" src="https://img.shields.io/github/directory-file-count/3leh/College/Lessons?type=dir&color=lightgrey"></picture></a></td>
         <td align="center">
-            <a href="Worksheets">Worksheets</a><br>
-            <img alt="GitHub repo dir count (Worksheets)" src="https://img.shields.io/github/directory-file-count/3leh/College/Worksheets?type=dir&color=lightgrey"></td>
+            <a href="Worksheets">Worksheets<br>
+            <picture><img alt="dir count in Worksheets" src="https://img.shields.io/github/directory-file-count/3leh/College/Worksheets?type=dir&color=lightgrey"></picture></a></td>
         <td align="center">
-            <a href="Assessments">Assessments</a><br>
-            <img alt="GitHub repo dir count (Assessments)" src="https://img.shields.io/github/directory-file-count/3leh/College/Assessments?type=dir&color=lightgrey"></td>
+            <a href="Assessments">Assessments<br>
+            <picture><img alt="dir count in Assessments" src="https://img.shields.io/github/directory-file-count/3leh/College/Assessments?type=dir&color=lightgrey"></picture></a></td>
     </tr>
     <tr>
         <td align="center">These are my key weekly assignments, which is mandatory homework.</td>
