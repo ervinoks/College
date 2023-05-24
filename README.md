@@ -31,7 +31,7 @@ All my programming throughout college. The tasks I do can usually be found in th
         <td rowspan="2" align="center"><b>CAP</b> stands for 'College Assessment Point', these are like practice exams for us to revise what we've learned in the past few months, and to also do it in silence as if it's an exam. The assessments are also like the CAPs.
     </tr>
     <tr>
-        <td colspan="3" align="left">The first number signifies what year of college that work is, so 1<sup>st</sup> Year or 2<sup>nd</sup> Year. The following two numbers state what index that piece of work is, 00 being the very first, and so on (the index ≤99). However for worksheets there could be WX## which means it's an extension worksheet. </td>
+        <td colspan="3" align="left">The first number signifies what year of college that work is, so 1<sup>ﬆ</sup> Year or 2<sup>nd</sup> Year. The following two numbers state what index that piece of work is, 00 being the very first, and so on (the index ≤99). However for worksheets there could be WX## which means it's an extension worksheet. </td>
     </tr>
 </table>
 
