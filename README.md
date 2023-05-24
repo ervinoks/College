@@ -1,12 +1,15 @@
-# College
+# College ![GitHub top language](https://img.shields.io/github/languages/top/3leh/College?color=blueviolet) ![GitHub repo size](https://img.shields.io/github/repo-size/3leh/College?color=green) ![GitHub last commit](https://img.shields.io/github/last-commit/3leh/College)
 All my programming throughout college. The tasks I do can usually be found in the .pdf files which are in the folder alongside the source files. In some projects - especially the earliest ones - I have different `.cs` files for different programs all in the same project, so I go into Properties to change the startup object to my desired program (how-to steps are below).
 
 ## What the letters mean:
-**A** for assignment, these are my key weekly assignments, which is mandatory homework.
+### A - Assignments ![GitHub repo dir count (Assignments)](https://img.shields.io/github/directory-file-count/3leh/College/Assignments?type=dir&color=lightgrey)
+These are my key weekly assignments, which is mandatory homework.
 
-**L** for lesson, these are usually done in class after learning a specific topic.
+### L - Lessons ![GitHub repo dir count (Lessons)](https://img.shields.io/github/directory-file-count/3leh/College/Lessons?type=dir&color=lightgrey)
+These are usually done in class after learning a specific topic or something.
 
-**W** for worksheet, these are the worksheets that I do, all of them accessible from my college's compsci website, typically I do them in class.
+### W - Worksheets ![GitHub repo dir count (Worksheets)](https://img.shields.io/github/directory-file-count/3leh/College/Worksheets?type=dir&color=lightgrey)
+These are the worksheets that I do, all of them accessible from my college's compsci website, typically I do them in class.
 
 > The first number signifies what year of college that work is, so 1<sup>st</sup> Year or 2<sup>nd</sup> Year. The following two numbers state what index that piece of work is, 00 being the very first, and so on (the index ≤99). However for worksheets there could be WX## which means it's an extension worksheet. 
 
