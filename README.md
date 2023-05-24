@@ -1,18 +1,22 @@
 # College
-All my programming throughout college. The tasks I do can usually be found in the .pdf files which are in the folder alongside the source files. Typically I have different `.cs` files for multiple programs, and I go into Properties to change the startup object to my desired program.
+All my programming throughout college. The tasks I do can usually be found in the .pdf files which are in the folder alongside the source files. In some projects - especially the earliest ones - I have different `.cs` files for different programs all in the same project, so I go into Properties to change the startup object to my desired program (how-to steps are below).
 
 ## What the letters mean:
-**A** for assignment, these are my key weekly assignments which are mandatory.
+**A** for assignment, these are my key weekly assignments, which is mandatory homework.
 
-**L** for lesson, these are some extra non-mandatory tasks that I'm able to do, usually a few in class, then I try to complete the rest of them outside of class.
+**L** for lesson, these are usually done in class after learning a specific topic.
 
-**W** for worksheet, these are the worksheets that I do, all of them accessible from my college's compsci website, most of the time I do them in class. 
+**W** for worksheet, these are the worksheets that I do, all of them accessible from my college's compsci website, typically I do them in class.
 
-The first number signifies what year of college that work is, so Year 1 or Year 2. The following two numbers state what index that piece of work is, 00 being the very first, and so on.
+> The first number signifies what year of college that work is, so 1<sup>st</sup> Year or 2<sup>nd</sup> Year. The following two numbers state what index that piece of work is, 00 being the very first, and so on (the index ≤99). However for worksheets there could be WX## which means it's an extension worksheet. 
 
-## How to open the solution
+---
+
+**CAP** for 'College Assessment Point', these are like practice exams for us to revise what we've learned in the past few months, and to also do it in silence as if it's an exam. The assessments are also like the CAPs.
+
+## How to open the solution:
 Using [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/ "Download Visual Studio Community") tends to be much more intuitive to use than [Visual Studio Code](https://code.visualstudio.com/ "Download Visual Studio Code") for C#.
-However for VSCode, you require the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp "Download the C# extension"), and likely the [GitHub extension](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github "Download the GitHub extension") if you wish to clone this repository directly into VSCode.  
+However for VSCode, you require the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp "Download the C# extension"), and likely you'll want [Git](https://git-scm.com/downloads "Download Git") if you wish to clone this repository directly into VSCode - fpr Visual Studio Community you can find it as an individual component (see [Dependencies](#dependencies)).
 - Once you have these extensions, you can view the code and edit, but debugging can get tedious. 
 - It's possible to use **"Run and Debug"** and make a launch.json, or use the terminal and use `dotnet` commands, such as: 
     ```batch
@@ -31,4 +35,5 @@ With Visual Studio Community, things should work right away without any extensio
 - You can also add breakpoints as necessary to see what happens throughout the code, by just clicking in the margin on the left of the code editor, to the left of the line numbers until you see:
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://github.com/3leh/College/assets/37591724/2dd0bd0c-c6fb-4f57-98ca-e1d581fee13e"><img src="https://github.com/3leh/College/assets/37591724/94b977f5-7ce6-4502-9f2a-ca004e8910df" width='11' height='11' title="Breakpoint Available"></picture>, then click to enable it: <picture><img src="https://github.com/3leh/College/assets/37591724/5c99624f-7834-498b-8cbc-07d175075edd" width='11' height='11' title="Breakpoint Enabled"></picture>.
 
-You also will need [.NET SDKs](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks "Download .NET") to run everything, preferably a .NET 6.0 SDK, and you could also get the latest .NET framework off of there, which I recommended especially for use with VSCode, as OmniSharp (which is what the C# extension uses) might have errors without .NET 4.8.
+## Dependencies
+You also will need [`.NET` SDKs](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks "Download .NET SDK") to run everything, preferably `.NET Framework`, and you could also get `.NET 6.0 SDK` off of there, which I recommended especially for use with VSCode, as OmniSharp (which is what the C# extension uses) might have errors without `.NET 4.8`. However with Visual Studio Community you can just go to the VS Installer app and modify your installation to your liking, and to search for individual components.
