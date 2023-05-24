@@ -51,7 +51,7 @@ However for VSCode, you require the [C# extension](https://marketplace.visualstu
 - You can easily clone the repository as soon as you launch it up, instead of creating a new project or solution.  
  Or you can clone it through the Git option at the top of the window, then copying the URL - https://github.com/3leh/College.git.
  - Once you have the solution open, you can choose any desired project using the drop down window in the debug toolbar.
-    - Or to run specific <samp>`.cs</samp> files, double click <kbd><samp>Properties</samp></kbd> in that class, and make sure you're in <kbd><samp>Application</samp></kbd>. 
+    - Or to run specific <samp>.cs</samp> files, double click <kbd><samp>Properties</samp></kbd> in that class, and make sure you're in <kbd><samp>Application</samp></kbd>. 
     - Under <kbd><samp>Startup object:</samp></kbd> it will likely say <kbd><samp>(Not set)</samp></kbd>, change this to the desired program, <kbd><kbd>Ctrl</kbd>+<kbd>S</kbd></kbd> to save.
 - Then once you click <kbd><picture><img src="https://github.com/3leh/College/assets/37591724/7d123503-75d1-47b2-b7c8-c75485454391" width='8' height='8'></picture><samp> Start</samp></kbd> (or just <kbd><picture><img src="https://github.com/3leh/College/assets/37591724/982379dc-5468-4c86-908d-b2dad7094137" width='11' height='11' title="Start Without Debugging (Ctrl+F5)"></picture></kbd>), it will run that selected program.
 - You can also add breakpoints as necessary to see what happens throughout the code, by just clicking in the margin on the left of the code editor, to the left of the line numbers until you see:
