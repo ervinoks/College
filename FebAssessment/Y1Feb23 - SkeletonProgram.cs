@@ -8,8 +8,6 @@
 using System;
 using System.IO;
 
-using Microsoft.SqlServer.Server;
-
 class Program
 {
     public struct ShipType
