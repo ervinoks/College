@@ -1,10 +1,3 @@
-﻿//Skeleton Program for the Y1 February Assessment examination
-//this code should be used in conjunction with the Preliminary Material
-//written by the AQA Programmer Team
-//developed in a Visual Studio Community programming environment
-
-//Version Number 1.0
-
 using System;
 using System.IO;
 
