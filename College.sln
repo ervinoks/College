@@ -148,7 +148,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L176", "Lessons\L176\L176.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAP1", "Assessments\CAP1\CAP1.csproj", "{9E2F8BD2-DAA7-43A7-B3BA-97248B78A8FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JanAssessment", "Assessments\January_Assessment\JanAssessment.csproj", "{9D58474E-D11A-4629-93CE-88EA0B104E7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JanAssessment", "Assessments\JanAssessment\JanAssessment.csproj", "{9D58474E-D11A-4629-93CE-88EA0B104E7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

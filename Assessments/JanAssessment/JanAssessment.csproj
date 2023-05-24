@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9D58474E-D11A-4629-93CE-88EA0B104E7C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>January_Assessment</RootNamespace>
-    <AssemblyName>January_Assessment</AssemblyName>
+    <RootNamespace>JanAssessment</RootNamespace>
+    <AssemblyName>JanAssessment</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
