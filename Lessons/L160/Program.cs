@@ -1,14 +1,16 @@
-﻿using System;
+﻿// Code written by the teacher
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SQLite;
 using System.IO;
+using System.Data.SQLite; // IF THERE IS AN ERROR, ADD NUGET PACKAGE
+// YOU CAN DO SO BY RIGHT CLICKING THIS PROJECT, CLICK MANAGE NUGET PACKAGES, SEARCH FOR 'SQLITE', INSTALL
 
 namespace L160
 {
-	//Structures used to temporaily hold the data taken from the database
+	//Structures used to temporarily hold the data taken from the database
 	public struct pupil
 	{
 		public int id;
@@ -294,9 +296,9 @@ namespace L160
 		}
 		public static void deleteclass()
 		{
-			//In this sub the user deltes a class  
+			//In this sub the user deletes a class  
 			//The user enters a class name 
-			//Firstly the id of the class will need to be retieved(SQL required for this)
+			//Firstly the id of the class will need to be retrieved(SQL required for this)
 			//Then any enrolments with this class need to be deleted (SQL required for this)
 			//Finally the class needs to be deleted from the classes table (SQL required for this)
 			Console.ReadKey();
