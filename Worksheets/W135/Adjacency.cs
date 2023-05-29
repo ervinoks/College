@@ -48,13 +48,13 @@ namespace W135
         {
 
         }
-        virtual public bool CheckFriendship(int input1, int input2)
-        {
+        //virtual public bool CheckFriendship(int input1, int input2) // unfinished code
+        //{
 
-        }
-        virtual public int FindIndex()
-        {
+        //}
+        //virtual public int FindIndex() // unfinished code
+        //{
 
-        }
+        //}
     }
 }
