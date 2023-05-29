@@ -43,13 +43,13 @@ namespace A119
 				x = 0; y = 0;
 				while (x < 1 || x > 8)
 				{
-					Console.Write("\rInput 1st coordinate of a ♟ : ");
+					Console.Write("\rInput 1st coordinate of a ♟: ");
 					var UserInput = Console.ReadKey();
 					if (char.IsDigit(UserInput.KeyChar)) { x = int.Parse(UserInput.KeyChar.ToString()); }
 				}
 				while (y < 1 || y > 8)
 				{
-					Console.Write("\rInput 2nd coordinate of a ♟ : ");
+					Console.Write("\rInput 2nd coordinate of a ♟: ");
 					var UserInput = Console.ReadKey();
 					if (char.IsDigit(UserInput.KeyChar)) { y = int.Parse(UserInput.KeyChar.ToString()); }
 				}
@@ -85,7 +85,7 @@ namespace A119
 				Console.Write("{0} ", y);
 				for (int x = 0; x < size; x++) 
 				{
-					Console.Write($"┃{(pawns[x, y - 1] ? '♟' : rook[x, y - 1] ? '♖' : ' ')}  ");
+					Console.Write($"┃ {(pawns[x, y - 1] ? '♟' : rook[x, y - 1] ? '♖' : ' ')} ");
 				}
 				Console.WriteLine("┃ ");
 				if (y != 1) { Console.WriteLine($" {middle}"); }
