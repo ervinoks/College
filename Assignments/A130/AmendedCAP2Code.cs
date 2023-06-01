@@ -173,13 +173,29 @@ namespace A130
 
 		private static void LoadAllowedWords(ref List<string> AllowedWords)
 		{
-			string filePath = Directory.GetCurrentDirectory();
-			filePath = Path.GetFullPath(Path.Combine(filePath, @"..\..\..\..\Lessons\L176"));
-			Directory.SetCurrentDirectory(filePath);
-			// uses text file which is in L176
+			string filePath = Directory.GetCurrentDirectory(), file;
+			Console.WriteLine("Enter '1' to use the default word list or '2' to enter your own list");
+			int choice = int.Parse(Console.ReadLine());	
+			if (choice == 2)
+			{
+				Console.WriteLine("Enter the name of the file containing the list of words");
+				
+				filePath = Path.GetFullPath(Path.Combine(filePath, @"..\..\"));
+				// sets dir location to A130 folder to access easier
+				// does not need this typically if text file is in bin\Debug or whatever depending on project config
+			}
+			else
+			{
+				filePath = Path.GetFullPath(Path.Combine(filePath, @"..\..\..\..\Lessons\L176"));
+				Directory.SetCurrentDirectory(filePath);
+				// uses txt file in L176
+				// for GitHub repo
+				// the actual question I'm doing does not need this else statement
+			}	
+			file = (choice == 2 ? Console.ReadLine() : "aqawords") + ".txt";
 			try
 			{
-				StreamReader FileReader = new StreamReader("aqawords.txt");
+				StreamReader FileReader = new StreamReader(filePath + file);
 				while (!FileReader.EndOfStream)
 				{
 					AllowedWords.Add(FileReader.ReadLine().Trim().ToUpper());
@@ -191,7 +207,6 @@ namespace A130
 				AllowedWords.Clear();
 			}
 		}
-
 		private static bool CheckWordIsInTiles(string Word, string PlayerTiles)
 		{
 			bool InTiles = true;
