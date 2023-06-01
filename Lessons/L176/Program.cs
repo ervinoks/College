@@ -90,6 +90,8 @@ namespace WordsCS
 
         static void Main(string[] args)
         {
+            Directory.SetCurrentDirectory(Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"..\..")));
+            // NOT IN ORIGINAL SKELETON CODE. This is added so the text file can be loaded from the L176 base folder
             List<String> AllowedWords = new List<string>();
             Dictionary<Char, int> TileDictionary = new Dictionary<char, int>();
             int MaxHandSize = 20;
