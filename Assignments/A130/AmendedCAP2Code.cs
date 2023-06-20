@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -92,7 +93,7 @@ namespace A130
 
 		static void Main(string[] args)
 		{
-			List<String> AllowedWords = new List<string>();
+			HashSet<String> AllowedWords = new HashSet<string>();
 			Dictionary<Char, int> TileDictionary = new Dictionary<char, int>();
 			int MaxHandSize = 20;
 			int MaxTilesPlayed = 50;
@@ -148,7 +149,7 @@ namespace A130
 			}
 		}
 
-		private static void DisplayTileValues(Dictionary<char, int> TileDictionary, List<string> AllowedWords)
+		private static void DisplayTileValues(Dictionary<char, int> TileDictionary, HashSet<string> AllowedWords)
 		{
 			Console.WriteLine();
 			Console.WriteLine("TILE VALUES");
@@ -171,40 +172,90 @@ namespace A130
 			return Hand;
 		}
 
-		private static void LoadAllowedWords(ref List<string> AllowedWords)
+		private static void LoadAllowedWords(ref HashSet<string> AllowedWords)
 		{
-			string filePath = Directory.GetCurrentDirectory(), file;
-			Console.WriteLine("Enter '1' to use the default word list or '2' to enter your own list");
-			int choice = int.Parse(Console.ReadLine());	
-			if (choice == 2)
+			int GetChoice(in int[] options)
 			{
-				Console.WriteLine("Enter the name of the file containing the list of words");
-				
-				filePath = Path.GetFullPath(Path.Combine(filePath, @"..\..\"));
-				// sets dir location to A130 folder to access easier
-				// does not need this typically if text file is in bin\Debug or whatever depending on project config
+				int choice = 0;
+				do
+				{
+					Console.Write("\rPlease enter your choice:  "); Console.CursorLeft--;
+					var UserInput = Console.ReadKey();
+					if (char.IsDigit(UserInput.KeyChar)) { choice = int.Parse(UserInput.KeyChar.ToString()); }
+					Console.WriteLine();
+				} while (!options.Contains(choice));
+				return choice;
 			}
-			else
+
+			Console.WriteLine("Enter '1' to use the default word list or '2' to enter your own list");
+			string filePath = null; StreamReader sr = null;
+			switch (GetChoice(new int[] { 1, 2 }))
 			{
+			case 1:
+			@Default:
+				filePath = Directory.GetCurrentDirectory();
 				filePath = Path.GetFullPath(Path.Combine(filePath, @"..\..\..\..\Lessons\L176"));
 				Directory.SetCurrentDirectory(filePath);
-				// uses txt file in L176
-				// for GitHub repo
-				// the actual question I'm doing does not need this else statement
-			}	
-			file = (choice == 2 ? Console.ReadLine() : "aqawords") + ".txt";
-			try
-			{
-				StreamReader FileReader = new StreamReader(filePath + file);
-				while (!FileReader.EndOfStream)
+				sr = new StreamReader(filePath); // broken code - access denied
+				break;
+			case 2:
+				Console.WriteLine("Do you want to use a local file: '1' | or a link to a .txt file: '2'");
+				switch (GetChoice(new int[] { 1, 2 }))
 				{
-					AllowedWords.Add(FileReader.ReadLine().Trim().ToUpper());
+				case 1:
+					Console.WriteLine("Custom: '1' | Runtime: '2'");
+					switch (GetChoice(new int[] { 1, 2 }))
+					{
+					case 1:
+					Custom:
+						Console.Write("Enter the path to the file containing the list of words (include file name): ");
+						do
+						{
+							string input = Console.ReadLine();
+							if (input == "default")	goto Default;
+							filePath = Path.GetFullPath(@input);
+							if (File.Exists(filePath))
+							{
+								Console.WriteLine("File loaded.");
+								break;
+							}						
+							Console.WriteLine("If your file can't be loaded, you can type 'default' to use the default word list.");
+						} while (!File.Exists(filePath));
+						break; 
+					case 2:
+						Console.WriteLine("Input your file name: ");
+						do
+						{
+							filePath = Console.ReadLine();
+							if (filePath == "default") goto Default;
+							else if (filePath == "custom") goto Custom;
+							if (File.Exists(filePath)) break;
+							Console.WriteLine("File not found. Please try again.");
+							Console.WriteLine("If your file can't be loaded, you can type 'default' to use the default word list or 'custom' to use a custom file path. ");
+						} while (!File.Exists(filePath));
+						break;
+					}
+					sr = new StreamReader(filePath);
+				break;
+				case 2:
+					Console.Write("Enter the link to the file containing the list of words: ");
+					WebRequest request = WebRequest.Create(Console.ReadLine());
+					request.Method = WebRequestMethods.Http.Get;
+					request.ContentType = "text/plain";
+					HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+					sr = new StreamReader(response.GetResponseStream());
+					break;
 				}
-				FileReader.Close();
+				break;
 			}
-			catch (Exception)
+
+			using (sr)
 			{
-				AllowedWords.Clear();
+				string line;
+				while ((line = sr.ReadLine()) != null)
+				{
+					AllowedWords.Add(line);
+				}
 			}
 		}
 		private static bool CheckWordIsInTiles(string Word, string PlayerTiles)
@@ -225,18 +276,10 @@ namespace A130
 			return InTiles;
 		}
 
-		private static bool CheckWordIsValid(string Word, List<string> AllowedWords)
+		private static bool CheckWordIsValid(string Word, HashSet<string> AllowedWords)
 		{
 			bool ValidWord = false;
-			int Count = 0;
-			while (Count < AllowedWords.Count && !ValidWord)
-			{
-				if (AllowedWords[Count] == Word)
-				{
-					ValidWord = true;
-				}
-				Count++;
-			}
+			if (AllowedWords.Contains(Word)) ValidWord = true;
 			return ValidWord;
 		}
 
@@ -289,7 +332,7 @@ namespace A130
 			return Score;
 		}
 
-		private static void UpdateAfterAllowedWord(string Word, ref string PlayerTiles, ref int PlayerScore, ref int PlayerTilesPlayed, Dictionary<char, int> TileDictionary, List<string> AllowedWords)
+		private static void UpdateAfterAllowedWord(string Word, ref string PlayerTiles, ref int PlayerScore, ref int PlayerTilesPlayed, Dictionary<char, int> TileDictionary, HashSet<string> AllowedWords)
 		{
 			PlayerTilesPlayed = PlayerTilesPlayed + Word.Length;
 			foreach (var Letter in Word)
@@ -348,7 +391,7 @@ namespace A130
 		}
 
 
-		private static void HaveTurn(string PlayerName, ref string PlayerTiles, ref int PlayerTilesPlayed, ref int PlayerScore, Dictionary<char, int> TileDictionary, ref QueueOfTiles TileQueue, List<string> AllowedWords, int MaxHandSize, int NoOfEndOfTurnTiles)
+		private static void HaveTurn(string PlayerName, ref string PlayerTiles, ref int PlayerTilesPlayed, ref int PlayerScore, Dictionary<char, int> TileDictionary, ref QueueOfTiles TileQueue, HashSet<string> AllowedWords, int MaxHandSize, int NoOfEndOfTurnTiles)
 		{
 			Console.WriteLine();
 			Console.WriteLine(PlayerName + " it is your turn.");
@@ -440,7 +483,7 @@ namespace A130
 			Console.WriteLine();
 		}
 
-		private static void PlayGame(List<string> AllowedWords, Dictionary<char, int> TileDictionary, bool RandomStart, int StartHandSize, int MaxHandSize, int MaxTilesPlayed, int NoOfEndOfTurnTiles)
+		private static void PlayGame(HashSet<string> AllowedWords, Dictionary<char, int> TileDictionary, bool RandomStart, int StartHandSize, int MaxHandSize, int MaxTilesPlayed, int NoOfEndOfTurnTiles)
 		{
 			int PlayerOneScore = 50;
 			int PlayerTwoScore = 50;
