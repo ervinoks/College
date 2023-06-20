@@ -152,7 +152,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A130", "Assignments\A130\A1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W137", "Worksheets\W137\W137.csproj", "{939B7C60-5CD4-4FF8-9FB0-6C4117E7662C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A131", "A131\A131.csproj", "{F2DD52AC-9A72-49CC-8235-552467907DC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A131", "Assignments\A131\A131.csproj", "{F2DD52AC-9A72-49CC-8235-552467907DC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
