@@ -196,7 +196,7 @@ namespace A130
 				filePath = Directory.GetCurrentDirectory();
 				filePath = Path.GetFullPath(Path.Combine(filePath, @"..\..\..\..\Lessons\L176"));
 				Directory.SetCurrentDirectory(filePath);
-				sr = new StreamReader(filePath); // broken code - access denied
+				sr = new StreamReader("aqawords.txt"); 				
 				break;
 			case 2:
 				Console.WriteLine("Do you want to use a local file: '1' | or a link to a .txt file: '2'");
