@@ -60,7 +60,7 @@ C# Dev Kit is very new to VSCode, so it's still in preview (however the C# exten
 ---
 <a id="vs-com" />With Visual Studio Community, things should work right away without any extensions:
 - You can easily clone the repository as soon as you launch it up, instead of creating a new project or solution.  
- Or you can clone it through the Git option at the top of the window, then copying the URL - https://github.com/3leh/College.git.
+ Or you can clone it through the Git option at the top of the window, then copying the URL - https://github.com/ervinoks/College.git.
  - Once you have the solution open, you can choose any desired project using the drop down window in the debug toolbar.
     - Or to run specific <samp>.cs</samp> files, double click <kbd><samp>Properties</samp></kbd> in that class, and make sure you're in <kbd><samp>Application</samp></kbd>. 
     - Under <kbd><samp>Startup object:</samp></kbd> it will likely say <kbd><samp>(Not set)</samp></kbd>, change this to the desired program, <kbd><kbd>Ctrl</kbd>+<kbd>S</kbd></kbd> to save.
