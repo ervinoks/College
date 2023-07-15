@@ -55,7 +55,7 @@ However for VSCode, you require the [C# extension](https://marketplace.visualstu
     ```
     or by trying to launch the <samp>.exe</samp> it creates in <samp>\bin\Debug</samp> once it has compiled (but obviously there are no debug features).
 
-C# Dev Kit is very new to VSCode, so it's still in preview (however the C# extension already existed), but as of currently, it doesn't support .NET Framework for easy debugging, as it's not in the SDK style, see <ins>https://stackoverflow.com/a/68110363</ins>. I might change to the new SDK style, but I haven't as of now.
+C# Dev Kit is very new to VSCode, so it's still in preview (however the C# extension already existed). But currently it doesn't support .NET Framework for intuitive debugging, because it's not in the SDK style: see <ins>https://stackoverflow.com/a/68110363</ins>. I might change to the new SDK style in the future.
 
 ---
 <a id="vs-com" />With Visual Studio Community, things should work right away without any extensions:
@@ -70,4 +70,4 @@ C# Dev Kit is very new to VSCode, so it's still in preview (however the C# exten
 
 
 ## Dependencies
-You also will need [<samp>.NET SDK</samp>s](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks "Download .NET SDK") to run everything, especially <samp>.NET Framework</samp>, and you could also get the <samp>.NET/.NET Core SDK</samp>s off of there. With both VSCode and Visual Studio community, you might have errors without <samp>.NET 4.8</samp>. However with Visual Studio Community you can just go to the VS Installer app which should already be on your computer, and modify your installation to your liking, and to also search for individual components. You can also import configurations on the Visual Studio Installer, here's a basic config which should run this Solution as expected: [vsconfig.zip](https://github.com/ervinoks/College/files/11683051/vsconfig.zip "Download vsconfig.zip").
+You also will need [<samp>.NET SDK</samp>s](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks "Download .NET SDK") to run everything, especially <samp>.NET Framework</samp>, and you could also get the <samp>.NET/.NET Core SDK</samp>s off of there. With both VSCode and Visual Studio community, you might have errors without <samp>.NET 4.8</samp>. However with Visual Studio Community you can just go to the VS Installer app which should already be on your computer, and modify your installation to your liking, also being able to search for individual components. Furthermore, you can import configurations, here's a basic config which should run this Solution as expected: [vsconfig.zip](https://github.com/ervinoks/College/files/11683051/vsconfig.zip "Download vsconfig.zip").
