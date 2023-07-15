@@ -13,22 +13,22 @@ All my programming throughout college. The tasks I do can usually be found in th
     <tr>
         <td align="center">
             <table>
-            <tr><td align="center"><a href="Assignments">Assignments<br>
+            <tr align="center"><td align="center"><a href="Assignments">Assignments<br>
             <picture><img alt="dir count in Assignments" src="https://img.shields.io/github/directory-file-count/ervinoks/College/Assignments?type=dir&color=lightgrey"></picture></a></td></tr></td>
             </table>
         <td align="center">
             <table>
-            <tr><td align="center"><a href="Lessons">Lessons<br>
+            <tr align="center"><td align="center"><a href="Lessons">Lessons<br>
             <picture><img alt="dir count in Lessons" src="https://img.shields.io/github/directory-file-count/ervinoks/College/Lessons?type=dir&color=lightgrey"></picture></a></td></tr></td>
             </table>
         <td align="center">
             <table>
-            <tr><td align="center"><a href="Worksheets">Worksheets<br>
+            <tr align="center"><td align="center"><a href="Worksheets">Worksheets<br>
             <picture><img alt="dir count in Worksheets" src="https://img.shields.io/github/directory-file-count/ervinoks/College/Worksheets?type=dir&color=lightgrey"></picture></a></td></tr></td>
             </table>
         <td align="center">
             <table>
-            <tr><td align="center"><a href="Assessments">Assessments<br>
+            <tr align="center"><td align="center"><a href="Assessments">Assessments<br>
             <picture><img alt="dir count in Assessments" src="https://img.shields.io/github/directory-file-count/ervinoks/College/Assessments?type=dir&color=lightgrey"></picture></a></td></tr></td>
             </table>
     </tr>
