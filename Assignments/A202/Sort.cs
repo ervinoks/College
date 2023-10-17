@@ -6,12 +6,17 @@ using System.Threading.Tasks;
 
 namespace A202
 {
-	internal class Program
+	public class Sort
 	{
 		static void Main(string[] args)
 		{
 			int[] nums = { 93, 46, 85, 90, 66, 57, 75, 5, 33, 45 };
 			Console.WriteLine($"Unsorted array: {string.Join(", ", nums)}\n");
+			Console.WriteLine($"Sorted array: {string.Join(", ", BubbleSort(nums))}");
+			Console.ReadKey();
+		}
+		static public int[] BubbleSort(int[] nums)
+		{
 			for (int i = 0; i < nums.Length; i++)
 			{
 				bool noSwaps = true;
@@ -31,8 +36,7 @@ namespace A202
 				}
 				if (noSwaps) break;
 			}
-			Console.WriteLine($"Sorted array: {string.Join(", ", nums)}");
-			Console.ReadKey();
+			return nums;
 		}
 	}
 }
