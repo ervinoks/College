@@ -1,4 +1,4 @@
-# College <picture><img alt="top lang" src="https://img.shields.io/github/languages/top/ervinoks/College?color=blueviolet"></picture> <picture><img alt="repo size" src="https://img.shields.io/github/repo-size/ervinoks/College"></picture> <picture><img alt="last commit" src="https://img.shields.io/github/last-commit/ervinoks/College"></picture>
+# College <picture><img alt="top lang" src="https://img.shields.io/github/languages/top/ervinoks/College?color=388A34"></picture> <picture><img alt="repo size" src="https://img.shields.io/github/repo-size/ervinoks/College"></picture> <picture><img alt="last commit" src="https://img.shields.io/github/last-commit/ervinoks/College"></picture>
 All my programming throughout college. The tasks I do can usually be found in the .pdf files which are in the folder alongside the source files. In some projects, especially the earliest ones, I have different <samp>.cs</samp> files for different programs all in the same project, so you can just go into Properties to change the startup object to the desired program that you want to run ([how-to](#vs-com)).
 
 ## What the letters mean:
