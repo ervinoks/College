@@ -1,4 +1,4 @@
-# College <picture><img alt="top lang" src="https://img.shields.io/github/languages/top/ervinoks/College?color=388A34"></picture> <picture><img alt="repo size" src="https://img.shields.io/github/repo-size/ervinoks/College"></picture> <picture><img alt="last commit" src="https://img.shields.io/github/last-commit/ervinoks/College"></picture>
+# College <picture><img alt="language" src="https://img.shields.io/badge/-csharp-388A34?logo=csharp"></picture> <picture><img alt="repo size" src="https://img.shields.io/github/repo-size/ervinoks/College"></picture> <picture><img alt="last commit" src="https://img.shields.io/github/last-commit/ervinoks/College"></picture>
 All my programming throughout college. The tasks I do can usually be found in the .pdf files which are in the folder alongside the source files. In some projects, especially the earliest ones, I have different <samp>.cs</samp> files for different programs all in the same project, so you can just go into Properties to change the startup object to the desired program that you want to run ([how-to](#vs-com)).
 
 ## What the letters mean:
@@ -44,7 +44,7 @@ All my programming throughout college. The tasks I do can usually be found in th
 </table>
 
 ## How to open the solution:
-Using [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/ "Download Visual Studio Community") tends to be much more intuitive to use than [Visual Studio Code](https://code.visualstudio.com/ "Download Visual Studio Code") for C#.
+Using [<img src="https://img.shields.io/badge/visual%20studio-5C2D91?style=plastic&logo=visualstudio">](https://visualstudio.microsoft.com/vs/community/ "Download Visual Studio Community") tends to be much more intuitive to use than [<img src="https://img.shields.io/badge/vscode-007ACC?style=plastic&logo=visualstudiocode">](https://code.visualstudio.com/ "Download Visual Studio Code") for C#.
 
 However for VSCode, you require the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp "Download the C# extension"), but more likely you'll want [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit "Download C# Dev Kit") (will automatically install C# and Intellicode) and as well as [Git](https://git-scm.com/downloads "Download Git") if you wish to clone this repository directly into VSCode - for Visual Studio Community you can find it as an individual component (see [Dependencies](#dependencies)).
 - Once you have Git, you can view the code and edit, but debugging can get tedious. 
