@@ -24,7 +24,7 @@ namespace A121
             tops.Add("a cuddly toy");
 
 
-            PizzaOrder newOrder = new PizzaOrder("***REMOVED***, ***REMOVED***", 12, tops);
+            PizzaOrder newOrder = new PizzaOrder("Barton Peveril, SO50 5ZA", 12, tops);
 
             Console.WriteLine("The pizza you have ordered comes to £" + newOrder.getPrice());
             System.Threading.Thread.Sleep(1000);

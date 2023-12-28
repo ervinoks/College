@@ -1,4 +1,4 @@
-﻿// Skeleton Program code for the ***REMOVED*** Computer Science CAP2 examination
+﻿// Skeleton Program code for the Barton Peveril Computer Science CAP2 examination
 // this code should be used in conjunction with the Preliminary Material
 // developed using Visual Studio
 // Version 1.2

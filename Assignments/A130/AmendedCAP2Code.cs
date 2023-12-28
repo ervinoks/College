@@ -1,4 +1,4 @@
-﻿// Amended code for the ***REMOVED*** Computer Science CAP2 examination
+﻿// Amended code for the Barton Peveril Computer Science CAP2 examination
 // this code should be used in conjunction with the Preliminary Material
 // developed using Visual Studio
 
