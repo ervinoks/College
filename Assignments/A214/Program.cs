@@ -37,11 +37,12 @@ namespace A214
 				{
 					if (doOp1 == false)
 					{
-						if (doPlus)	op1 = (int.Parse(op1) + int.Parse(op2)).ToString();
-						else op1 = (int.Parse(op1) - int.Parse(op2)).ToString();
+						op1 = doPlus ? 
+							(int.Parse(op1) + int.Parse(op2)).ToString() : 
+							(int.Parse(op1) - int.Parse(op2)).ToString();
 						op2 = default;
 					}
-					doPlus = item == 'p' ? true : false;
+					doPlus = item == 'p';
 					doOp1 = false;
 				}
 				else if (char.IsDigit(item))
@@ -64,9 +65,8 @@ namespace A214
 				else if (diff < 0) defenders[i] = "0"; // def < att
 				else attackers[i] = "0"; defenders[i] = "0"; // def == att
 			}
-			Func<string, int> toInt = (string s) => int.Parse(s);
-			if (defenders.Sum(toInt) >= attackers.Sum(toInt)) return true;
-			return false;
+			int toInt(string s) => int.Parse(s);
+			return defenders.Sum(toInt) >= attackers.Sum(toInt);
 		}
 	}
 }
