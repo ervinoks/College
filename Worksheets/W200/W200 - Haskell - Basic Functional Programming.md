@@ -20,22 +20,22 @@ Haskell is case sensitive.
 </ol>
 
 ### *Find functions to do the following:*
-1.  Find the result of 7 \`mod\` 3
+1.  Find the result of 7 \`mod\` 3.
     ```haskell
     mod 7 3
     -> 1
     ```
-2.  Find the result of the whole number division of 7 by 3
+2.  Find the result of the whole number division of 7 by 3.
     ```haskell
     div 7 3
     -> 2
     ```
-3.  Subtract 3 from 7
+3.  Subtract 3 from 7.
     ```haskell
     subtract 3 7 
     -> 4
     ```
-4.  Find the greatest common divisor of the two numbers 20 and 8
+4.  Find the greatest common divisor of the two numbers 20 and 8.
     ```haskell
     gcd 20 8
     -> 4
@@ -114,11 +114,8 @@ Run the program. You can then call the function in the console window e.g. `squa
     ```haskell
     avgThree x y z = (x + y + z) / 3
     ```
-6.  Heron’s Formula for the area of a triangle from the lengths of 3 sides (a,b,c) is: 
-    $$area=\sqrt{p(p-a)(p-b)(p-c)}$$  
-    Where p is half the perimeter
-    $$p=\frac{a+b+c}{2}$$
-
+6.  Heron’s Formula for the area of a triangle from the lengths of 3 sides (a,b,c) is: $area=\sqrt{p(p-a)(p-b)(p-c)}$  
+    Where p is half the perimeter: $p=\frac{a+b+c}{2}$\
     Write 2 functions: `halfP` to find half the perimeters and `heronArea` to find the area of a triangle using the formulas above.
     ```haskell
     halfP x y z = (x + y + z) / 2
@@ -141,7 +138,7 @@ Run the program. You can then call the function in the console window e.g. `squa
     ```
 ### **Recursive functions**
 
-Look at this example function that uses recursion. This is the factorial function. Remember in recursion you need at least one base case and the general case. (ignore error)
+Look at this example function that uses recursion. This is the factorial function. Remember in recursion you need at least one base case and the general case (ignoring errors).
 
 <table>
 <tr>
@@ -169,14 +166,14 @@ fact 5
 </tr>
 </table>
 
-1.  Write a function called `sumUp` that receives one integer and outputs the value of the sum of the integers from the argument value down to and including 1
+1.  Write a function called `sumUp` that receives one integer and outputs the value of the sum of the integers from the argument value down to and including 1.
     ```haskell
     ```
 
-2.  Write a function called `sumUpTwo` that receives one integer and outputs the value of the sum of every other value from the argument value down to 1 or 0
+2.  Write a function called `sumUpTwo` that receives one integer and outputs the value of the sum of every other value from the argument value down to 1 or 0.
     ```haskell
     ```
-3.  Write a function called `fibMe` to output the nth number in the fibonacci sequence assuming 1st term is 0 and 2nd term is 1  
+3.  Write a function called `fibMe` to output the nth number in the fibonacci sequence assuming 1st term is 0 and 2nd term is 1.
     ```haskell
     ```
 ### If.. else.. and other features
