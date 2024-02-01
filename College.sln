@@ -80,7 +80,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A119", "Assignments\A119\A1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assessments", "Assessments", "{11C6F862-D0A1-407C-9D1B-949E4A61E84D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FebAssessment", "Assessments\FebAssessment\FebAssessment.csproj", "{1729D379-ACA4-4EB3-A4C6-C7AC5CDD9E94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FebAssessment-2023", "Assessments\FebAssessment\FebAssessment-2023.csproj", "{1729D379-ACA4-4EB3-A4C6-C7AC5CDD9E94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A120", "Assignments\A120\A120.csproj", "{96C66ED2-DBA3-44F2-A917-010B7A7AB47B}"
 EndProject
@@ -144,7 +144,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L176", "Lessons\L176\L176.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAP1", "Assessments\CAP1\CAP1.csproj", "{9E2F8BD2-DAA7-43A7-B3BA-97248B78A8FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JanAssessment", "Assessments\JanAssessment\JanAssessment.csproj", "{9D58474E-D11A-4629-93CE-88EA0B104E7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JanAssessment-2023", "Assessments\JanAssessment\JanAssessment-2023.csproj", "{9D58474E-D11A-4629-93CE-88EA0B104E7C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A130", "Assignments\A130\A130.csproj", "{3E93D907-1CE4-4245-AAD3-85E5D30085AE}"
 EndProject
