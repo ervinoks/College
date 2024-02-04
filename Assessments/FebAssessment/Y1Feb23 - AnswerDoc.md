@@ -26,13 +26,13 @@
   <tr>
    <td><strong>Surname</strong>
    </td>
-   <td colspan="10" ><strong></strong>
+   <td colspan="10"><strong>Oks</strong>
    </td>
   </tr>
   <tr>
    <td><strong>Forename(s)</strong>
    </td>
-   <td colspan="10" ><strong>Ervin</strong>
+   <td colspan="10"><strong>Ervin</strong>
    </td>
   </tr>
   <tr>
@@ -429,9 +429,7 @@ private static void GetRowColumn(ref int Row, ref int Column)
         }
     }
 }
-
 // ...
-
 private static void PlayGame(ref char[,] Board, ref ShipType[] Ships)
 {
     bool GameWon = false;
@@ -464,7 +462,7 @@ private static void PlayGame(ref char[,] Board, ref ShipType[] Ships)
             Console.WriteLine();
         }
     }
-}
+}</pre>
    </td>
    <td>
    </td>
