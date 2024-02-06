@@ -1,4 +1,6 @@
-# College <picture><img alt="language" src="https://img.shields.io/badge/-csharp-388A34?logo=csharp"></picture> <picture><img alt="repo size" src="https://img.shields.io/github/repo-size/ervinoks/College"></picture> <picture><img alt="last commit" src="https://img.shields.io/github/last-commit/ervinoks/College"></picture>
+# College <a href=https://learn.microsoft.com/en-us/dotnet/csharp/><img alt="language | c#" src="https://img.shields.io/badge/-csharp-512BD4?logo=csharp"></a> <picture><img alt="repo size" src="https://img.shields.io/github/repo-size/ervinoks/College?labelColor=grey"></picture> <picture><img alt="last commit" src="https://img.shields.io/github/last-commit/ervinoks/College"></picture> <a href=https://opensource.org/license/mit/><img alt="license | MIT" src="https://img.shields.io/badge/License-MIT-ac8b11.svg?labelColor=yellow"></a>
+
+
 All my programming throughout college. The tasks I do can usually be found in the <samp>.pdf</samp> files which are in the folder alongside the source files. In some projects, especially the earliest ones, I have different <samp>.cs</samp> files for different programs all in the same project, so you can just go into Properties to change the startup object to the desired program that you want to run ([how-to](#vs-com)).
 
 ## What the letters mean:
@@ -35,7 +37,7 @@ All my programming throughout college. The tasks I do can usually be found in th
     <tr>
         <td align="center">These are my key weekly assignments, which is mandatory homework.</td>
         <td align="center">These are usually done in class after learning a specific topic or something.</td>
-        <td align="center">These are the worksheets that I do, all of them accessible from my college's compsci website, typically I do them in class.</td>
+        <td align="center">These are the worksheets that I do, all of them accessible from my college's compsci website, typically I do them in class. There aren't many 2nd Year worksheets, as I work on my NEA instead, but there is some <a href=https://www.haskell.org/><img alt="language | haskell" src="https://img.shields.io/badge/-haskell-5D4F85?logo=haskell"></a> that I do, to help understand functional programming.</td>
         <td rowspan="1" align="center"><b>CAP</b> stands for 'College Assessment Point', these are like practice exams for us to revise what we've learned in the past few months, and to also do it in silence as if it's an exam. The assessments are also like the CAPs.
     </tr>
     <tr>
