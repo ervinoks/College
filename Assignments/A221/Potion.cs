@@ -8,22 +8,20 @@ namespace A221
 {
 	internal class Potion
 	{
-		protected int[] Colour { get; set; }
-		protected int Volume { get; set; }
-		public Potion(int Volume, params int[] colours)
+		public byte[] Colour { get; private set; }
+		public int Volume { get; private set; }
+		public Potion(int Volume, params byte[] colours)
 		{
 			if (colours.Length != 3) throw new ArgumentException("Potion must have 3 colour values.");
 			Colour = colours;
 			this.Volume = Volume;
 		}
-		public int[] getColour => Colour;
-		public int getVolume => Volume;
 		public Potion Mix(Potion secondPotion)
 		{
-			List<int> mixedColour = new List<int>();
+			List<byte> mixedColour = new List<byte>();
 			for (int i = 0; i < Colour.Length; i++) 
 			{
-				mixedColour.Add((Colour[i] * Volume + secondPotion.Colour[i] * secondPotion.Volume) / (Volume + secondPotion.Volume));
+				mixedColour.Add(Convert.ToByte((Colour[i] * Volume + secondPotion.Colour[i] * secondPotion.Volume) / (Volume + secondPotion.Volume)));
 			}
 			return new Potion(Volume + secondPotion.Volume, mixedColour.ToArray());
 		}
