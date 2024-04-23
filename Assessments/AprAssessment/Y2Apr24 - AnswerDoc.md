@@ -149,6 +149,7 @@ namespace AprAssessment
    <td><strong>2</strong>
    </td>
    <td colspan="2">
+     <picture><img alt="testing screenshot for question 1" src="https://github.com/ervinoks/College/assets/37591724/168bb626-1c98-4e83-bf52-726be7df0153"></picture>
    </td>
    <td><i>1</i></td>
   </tr>
@@ -225,7 +226,8 @@ namespace AprAssessment
    </td>
    <td><strong>2</strong>
    </td>
-   <td colspan="2" >
+   <td colspan="2">
+     <picture><img alt="testing screenshot for question 1" src="https://github.com/ervinoks/College/assets/37591724/d623d991-2327-466f-99ca-bd94a7ef1efc">
    </td>
    <td><i>1</i></td>
   </tr>
